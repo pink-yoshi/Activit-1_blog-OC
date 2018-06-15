@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': getLoveIt() > '0',
+                'list-group-item-danger': getLoveIt() < '0'}">
+ <div ><h2 style="display: inline">{{ getTitle() }} </h2><h3 style="display: inline ; color: rgba(83, 80, 83, 0.867); margin-left:400px; " >posté le {{ getDate() | date: 'MM/dd/yy, hh:mm a'}}</h3>
+  <br/><br/>
+</div>
+  <p>{{ getContent() }}</p>
+  <button class="btn btn-success" (click)="love()">Love it !</button>
+  <button class="btn btn-danger" (click)="noLove()">Dont love it !</button>
+</li>
+
+
